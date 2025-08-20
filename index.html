@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hypeak Capital - Soluciones Energéticas</title>
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; color: #222; line-height: 1.6; scroll-behavior: smooth; }
+    h1, h2, h3 { margin: 0 0 1rem 0; }
+
+    /* Hero Section */
+    header {
+      background: linear-gradient(rgba(0,30,60,0.7), rgba(0,30,60,0.7)),
+                  url('https://images.unsplash.com/photo-1581091215367-59ab6c1f88ef?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      color: white; padding: 7rem 2rem; text-align: center;
+    }
+    header h1 { font-size: 3rem; margin-bottom: 1rem; }
+    header p { font-size: 1.2rem; margin-bottom: 2rem; }
+    .btn-primary {
+      background: #00aaff; color: white; padding: 0.8rem 1.6rem; border-radius: 30px;
+      font-weight: bold; text-decoration: none; transition: background 0.3s;
+    }
+    .btn-primary:hover { background: #008ecc; }
+
+    nav {
+      background: #004080; padding: 1rem; text-align: center; position: sticky; top: 0; z-index: 1000;
+    }
+    nav a {
+      color: white; margin: 0 1rem; text-decoration: none; font-weight: bold; transition: color 0.3s;
+    }
+    nav a:hover { color: #00ccff; }
+
+    section { padding: 4rem 10%; }
+    h2 { color: #004080; margin-bottom: 2rem; font-size: 2rem; text-align: center; }
+
+    /* Cards & Grid */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+    .card {
+      background: white; padding: 2rem; border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+    .icon {
+      font-size: 40px; color: #00aaff; margin-bottom: 1rem;
+    }
+
+    /* Case Study Images */
+    .case-card {
+      background: #f9f9f9; border-radius: 12px; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .case-card:hover { transform: scale(1.02); }
+    .case-card img { width: 100%; height: 180px; object-fit: cover; }
+    .case-card .content { padding: 1rem; }
+
+    footer {
+      background: #001F3F; color: white; padding: 2rem; text-align: center;
+    }
+    footer a { color: #00ccff; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <!-- Hero -->
+  <header>
+    <h1>Hypeak Capital</h1>
+    <p>Powering tomorrow’s energy solutions</p>
+    <a href="#solutions" class="btn-primary">Ver Soluciones</a>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#company">Nuestra Compañía</a>
+    <a href="#solutions">Soluciones</a>
+    <a href="#cases">Casos de Éxito</a>
+    <a href="#consulting">Consultoría</a>
+    <a href="#contact">Contacto</a>
+  </nav>
+
+  <!-- Company -->
+  <section id="company">
+    <h2>Nuestra Compañía</h2>
+    <p style="max-width:800px; margin:auto; text-align:center;">
+      Somos especialistas en innovación energética, ofreciendo soluciones personalizadas para desafíos complejos durante más de 15 años. <br><br>
+      <strong>Misión:</strong> Impulsar el crecimiento sostenible a través de nuestra experiencia en soluciones energéticas.
+    </p>
+  </section>
+
+  <!-- Solutions -->
+  <section id="solutions">
+    <h2>Selección de Soluciones</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="icon">⚡</div>
+        <h3>Estructuración de PPAs</h3>
+        <p>Maximizamos el valor de acuerdos de compra de energía mediante negociación, cumplimiento normativo y alianzas sostenibles.</p>
+      </div>
+      <div class="card">
+        <div class="icon">💰</div>
+        <h3>Financiamiento de Energía</h3>
+        <p>Acceso a estructuras de capital flexibles, modelos financieros innovadores y gestión de fondos comprobada.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📊</div>
+        <h3>Consultoría y Estrategia</h3>
+        <p>Eficientizamos costos, diseñamos estrategias de comercialización, gestionamos riesgos y supervisamos proyectos energéticos.</p>
+      </div>
+    </div>
+    <p style="text-align:center; margin-top:2rem;">
+      <a href="#cases" class="btn-primary">Ver Casos de Éxito</a>
+    </p>
+  </section>
+
+  <!-- Cases -->
+  <section id="cases">
+    <h2>Casos de Éxito</h2>
+    <div class="grid">
+      <div class="case-card">
+        <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=800&q=80" alt="Solar Plant">
+        <div class="content"><strong>Querétaro:</strong> 499 kW Solar EPC</div>
+      </div>
+      <div class="case-card">
+        <img src="https://images.unsplash.com/photo-1581093588401-22b7f2e5dfba?auto=format&fit=crop&w=800&q=80" alt="Solar Project">
+        <div class="content"><strong>León:</strong> 625 kW Solar EPC</div>
+      </div>
+      <div class="case-card">
+        <img src="https://images.unsplash.com/photo-1584270354949-1a6a91a52d58?auto=format&fit=crop&w=800&q=80" alt="Energy Plant">
+        <div class="content"><strong>Aguascalientes:</strong> 498 kW Solar PPA</div>
+      </div>
+      <div class="case-card">
+        <img src="https://images.unsplash.com/photo-1598262969879-295b6a830afe?auto=format&fit=crop&w=800&q=80" alt="Natural Gas">
+        <div class="content"><strong>León:</strong> 4.8 MW Gas Natural EPC & Financiamiento</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Consulting -->
+  <section id="consulting">
+    <h2>Consultoría y Estrategia</h2>
+    <p style="max-width:800px; margin:auto; text-align:center;">
+      Apoyamos a nuestros clientes con conocimientos de mercado, adquisición competitiva de energía, comercialización estratégica,
+      gestión de riesgos y supervisión integral de proyectos.
+    </p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contacto</h2>
+    <p style="text-align:center;">
+      <strong>Ubicación:</strong> León, Guanajuato, México <br>
+      <strong>Email:</strong> <a href="mailto:info@hypeakcapital.com">info@hypeakcapital.com</a>
+    </p>
+    <p style="text-align:center; margin-top:1rem;">
+      <a href="mailto:info@hypeakcapital.com" class="btn-primary">Escríbenos</a>
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Hypeak Capital - Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>

@@ -15,12 +15,7 @@
       color: white; padding: 7rem 2rem; text-align: center;
     }
     header h1 { font-size: 3rem; margin-bottom: 1rem; }
-    header p { font-size: 1.2rem; margin-bottom: 2rem; }
-    .btn-primary {
-      background: #00aaff; color: white; padding: 0.8rem 1.6rem; border-radius: 30px;
-      font-weight: bold; text-decoration: none; transition: background 0.3s;
-    }
-    .btn-primary:hover { background: #008ecc; }
+    header p { font-size: 1.3rem; margin-bottom: 1rem; }
 
     nav {
       background: #004080; padding: 1rem; text-align: center; position: sticky; top: 0; z-index: 1000;
@@ -33,7 +28,7 @@
     section { padding: 4rem 10%; }
     h2 { color: #004080; margin-bottom: 2rem; font-size: 2rem; text-align: center; }
 
-    /* Cards & Grid */
+    /* Grid & Cards */
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
     .card {
       background: white; padding: 2rem; border-radius: 16px;
@@ -41,11 +36,15 @@
       text-align: center;
     }
     .card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
-    .icon {
-      font-size: 40px; color: #00aaff; margin-bottom: 1rem;
-    }
+    .icon { font-size: 40px; color: #00aaff; margin-bottom: 1rem; }
 
-    /* Case Study Images */
+    /* Company section */
+    .company-container { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2rem; }
+    .company-text { flex: 1; min-width: 280px; }
+    .company-logo { flex: 0 0 200px; }
+    .company-logo img { max-width: 100%; border-radius: 12px; }
+
+    /* Case Study */
     .case-card {
       background: #f9f9f9; border-radius: 12px; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.1);
       transition: transform 0.3s;
@@ -53,6 +52,11 @@
     .case-card:hover { transform: scale(1.02); }
     .case-card img { width: 100%; height: 180px; object-fit: cover; }
     .case-card .content { padding: 1rem; }
+
+    /* Results */
+    .results { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; text-align: center; margin-top: 3rem; }
+    .result-box { background: #e8f6ff; padding: 2rem; border-radius: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.1); }
+    .result-box h3 { color: #004080; font-size: 1.8rem; margin-bottom: 0.5rem; }
 
     footer {
       background: #001F3F; color: white; padding: 2rem; text-align: center;
@@ -64,16 +68,9 @@
   <!-- Hero -->
   <header>
     <h1>Hypeak Capital</h1>
-    <p>Powering tomorrow’s energy solutions</p>
+    <p>Providing the best energy solutions today for a sustainable tomorrow</p>
+    <p><em>Profesionales en asesoría y consultoría</em></p>
   </header>
-
-<style>
-header {
-  background: linear-gradient(rgba(0,30,60,0.7), rgba(0,30,60,0.7)),
-              url('/images/hero-bg.jpg') center/cover no-repeat;
-  color: white; padding: 7rem 2rem; text-align: center;
-}
-</style>
 
   <!-- Navigation -->
   <nav>
@@ -87,75 +84,104 @@ header {
   <!-- Company -->
   <section id="company">
     <h2>Nuestra Compañía</h2>
-    <p style="max-width:800px; margin:auto; text-align:center;">
-      Somos especialistas en innovación energética, ofreciendo soluciones personalizadas para desafíos complejos durante más de 15 años. <br><br>
-      <strong>Misión:</strong> Impulsar el crecimiento sostenible a través de nuestra experiencia en soluciones energéticas.
-    </p>
+    <div class="company-container">
+      <div class="company-text">
+        <p>
+          Somos especialistas en innovación energética, ofreciendo soluciones personalizadas para desafíos complejos durante más de 15 años. <br><br>
+          <strong>Misión:</strong> Impulsar el crecimiento sostenible a través de nuestra experiencia en soluciones energéticas.
+        </p>
+      </div>
+      <div class="company-logo">
+        <img src="/images/HypeakLogoOnly.jpg" alt="Hypeak Logo">
+      </div>
+    </div>
   </section>
 
   <!-- Solutions -->
   <section id="solutions">
-    <h2>Selección de Soluciones</h2>
+    <h2>Principales Soluciones y Servicios</h2>
     <div class="grid">
       <div class="card">
-        <div class="icon">⚡</div>
+        <div class="icon">🔎</div>
+        <h3>Selección de Soluciones</h3>
+        <p>Soluciones energéticas basadas en datos: análisis riguroso, ROI, comparación de opciones (solar, gas, almacenamiento, etc.)</p>
+      </div>
+      <div class="card">
+        <div class="icon">📄</div>
         <h3>Estructuración de PPAs</h3>
-        <p>Maximizamos el valor de acuerdos de compra de energía mediante negociación, cumplimiento normativo y alianzas sostenibles.</p>
+        <p>Maximizamos el valor en acuerdos de compra de energía, con experiencia en negociación y cumplimiento normativo.</p>
       </div>
       <div class="card">
         <div class="icon">💰</div>
         <h3>Financiamiento de Energía</h3>
-        <p>Acceso a estructuras de capital flexibles, modelos financieros innovadores y gestión de fondos comprobada.</p>
+        <p>Acceso a estructuras de capital flexibles, modelos financieros innovadores y gestión comprobada de fondos.</p>
       </div>
       <div class="card">
         <div class="icon">📊</div>
         <h3>Consultoría y Estrategia</h3>
-        <p>Eficientizamos costos, diseñamos estrategias de comercialización, gestionamos riesgos y supervisamos proyectos energéticos.</p>
+        <p>Expertos en adquisición competitiva, estrategias de comercialización, gestión de riesgos y supervisión de proyectos.</p>
       </div>
     </div>
-    <p style="text-align:center; margin-top:2rem;">
-      <a href="#cases" class="btn-primary">Ver Casos de Éxito</a>
-    </p>
+
+    <!-- Results -->
+    <div class="results">
+      <div class="result-box">
+        <h3>20+</h3>
+        <p>MW soluciones implementadas</p>
+      </div>
+      <div class="result-box">
+        <h3>300+</h3>
+        <p>GWh en transacciones PPA</p>
+      </div>
+      <div class="result-box">
+        <h3>$10M+</h3>
+        <p>USD en financiamiento</p>
+      </div>
+      <div class="result-box">
+        <h3>50+</h3>
+        <p>Proyectos desarrollados</p>
+      </div>
+    </div>
   </section>
 
   <!-- Cases -->
   <section id="cases">
-  <h2>Casos de Éxito</h2>
-  <div class="grid">
-    <div class="case-card">
-      <img src="/images/queretaro_499kW.jpg" alt="Querétaro Solar">
-      <div class="content"><strong>Querétaro:</strong> 499 kW Solar EPC</div>
+    <h2>Casos de Éxito</h2>
+    <div class="grid">
+      <div class="case-card">
+        <img src="/images/queretaro_499kW.jpg" alt="Querétaro Solar">
+        <div class="content"><strong>Querétaro:</strong> 499 kW Solar EPC</div>
+      </div>
+      <div class="case-card">
+        <img src="/images/leon1_625kW.jpg" alt="León Solar">
+        <div class="content"><strong>León:</strong> 625 kW Solar EPC</div>
+      </div>
+      <div class="case-card">
+        <img src="/images/aguascalientes_498kW.jpg" alt="Aguascalientes Solar">
+        <div class="content"><strong>Aguascalientes:</strong> 498 kW Solar PPA</div>
+      </div>
+      <div class="case-card">
+        <img src="/images/leon2_4800kW.jpg" alt="León Natural Gas">
+        <div class="content"><strong>León:</strong> 4.8 MW Gas Natural EPC & Financiamiento</div>
+      </div>
+      <div class="case-card">
+        <img src="/images/sanjose_89GWh.jpg" alt="San Jose Iturbide">
+        <div class="content"><strong>San José Iturbide:</strong> 89 GWh PPA</div>
+      </div>
+      <div class="case-card">
+        <img src="/images/leon3_3000kW.jpg" alt="León BESS">
+        <div class="content"><strong>León:</strong> 5,956 kWh (3.0 MW) BESS EPC</div>
+      </div>
+      <div class="case-card">
+        <img src="/images/leon4_560kW.jpg" alt="León EPC">
+        <div class="content"><strong>León:</strong> 560 kW Solar EPC</div>
+      </div>
+      <div class="case-card">
+        <img src="/images/torreon_350kW.jpg" alt="Torreón EPC">
+        <div class="content"><strong>Torreón:</strong> 350 kW Solar EPC</div>
+      </div>
     </div>
-    <div class="case-card">
-      <img src="/images/leon1_625kW.jpg" alt="León Solar">
-      <div class="content"><strong>León:</strong> 625 kW Solar EPC</div>
-    </div>
-    <div class="case-card">
-      <img src="/images/aguascalientes_498kW.jpg" alt="Aguascalientes Solar">
-      <div class="content"><strong>Aguascalientes:</strong> 498 kW Solar PPA</div>
-    </div>
-    <div class="case-card">
-      <img src="/images/leon2_4800kW.jpg" alt="León Natural Gas">
-      <div class="content"><strong>León:</strong> 4.8 MW Gas Natural EPC & Financiamiento</div>
-    </div>
-    <div class="case-card">
-      <img src="/images/sanjose_89GWh.jpg" alt="San Jose Iturbide">
-      <div class="content"><strong>San José Iturbide:</strong> 89 GWh PPA</div>
-    </div>
-    <div class="case-card">
-      <img src="/images/leon3_3000kW.jpg" alt="León BESS">
-      <div class="content"><strong>León:</strong> 5,956 kWh (3.0 MW) BESS EPC</div>
-    </div>
-    <div class="case-card">
-      <img src="/images/leon4_560kW.jpg" alt="León EPC">
-      <div class="content"><strong>León:</strong> 560 kW Solar EPC</div>
-    </div>
-    <div class="case-card">
-      <img src="/images/torreon_350kW.jpg" alt="Torreón EPC">
-      <div class="content"><strong>Torreón:</strong> 350 kW Solar EPC</div>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- Consulting -->
   <section id="consulting">
@@ -180,7 +206,7 @@ header {
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Hypeak Capital - Todos los derechos reservados</p>
+    <p>&copy; 2019 Hypeak Capital - Todos los derechos reservados</p>
   </footer>
 </body>
 </html>

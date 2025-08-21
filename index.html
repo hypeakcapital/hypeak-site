@@ -36,7 +36,7 @@
     /* Navigation */
     nav {
       background: #004080;
-      padding: 1rem;
+      padding: 0.6rem 1rem;  /* smaller height */
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -44,15 +44,16 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1rem;
+      gap: 0.8rem;
     }
     nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
-      padding: 0.5rem 0.8rem;
+      padding: 0.3rem 0.7rem;
       border-radius: 6px;
       transition: background 0.3s, color 0.3s;
+      white-space: nowrap;  /* prevents splitting words */
     }
     nav a:hover { background: #0066cc; color: #fff; }
 
@@ -100,7 +101,9 @@
       padding: 1.5rem;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
     }
+    .result-box:hover { transform: translateY(-5px); }
     .result-box h3 {
       margin: 0;
       font-size: 1.8rem;
@@ -134,7 +137,6 @@
     <a href="#company">Nuestra Compañía</a>
     <a href="#solutions">Soluciones</a>
     <a href="#cases">Casos&nbsp;de&nbsp;Éxito</a>
-    <a href="#consulting">Consultoría</a>
     <a href="#contact">Contacto</a>
   </nav>
 
@@ -175,7 +177,7 @@
       </div>
       <div class="card">
         <div class="icon">🎯</div>
-        <h3>Consultoría y Estrategia</h3>
+        <h3>Consultoría Estratégica</h3>
         <p>Estrategias de adquisición, gestión de riesgos y visión integral en desarrollo de proyectos energéticos.</p>
       </div>
     </div>
@@ -244,7 +246,7 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact">
+  <section id="contact" class="alt">
     <h2>Contacto</h2>
     <p style="text-align:center; margin-top:1rem;">
       <a href="mailto:info@hypeakcapital.com" class="btn-primary">Escríbenos</a>

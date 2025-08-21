@@ -5,61 +5,118 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hypeak Capital - Soluciones Energéticas</title>
   <style>
-    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; color: #222; line-height: 1.6; scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #222;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
     h1, h2, h3 { margin: 0 0 1rem 0; }
-
-    /* Hero Section */
-    header {
-      background: linear-gradient(rgba(0,30,60,0.7), rgba(0,30,60,0.7)),
-                 url('/images/hero-bg.jpg') center/cover no-repeat;
-      color: white; padding: 7rem 2rem; text-align: center;
-    }
-    header h1 { font-size: 3rem; margin-bottom: 1rem; }
-    header p { font-size: 1.3rem; margin-bottom: 1rem; }
-
-    nav {
-      background: #004080; padding: 1rem; text-align: center; position: sticky; top: 0; z-index: 1000;
-    }
-    nav a {
-      color: white; margin: 0 1rem; text-decoration: none; font-weight: bold; transition: color 0.3s;
-    }
-    nav a:hover { color: #00ccff; }
-
     section { padding: 4rem 10%; }
     h2 { color: #004080; margin-bottom: 2rem; font-size: 2rem; text-align: center; }
 
-    /* Grid & Cards */
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+    /* Hero Section */
+    header {
+      background: linear-gradient(rgba(0,30,60,0.65), rgba(0,30,60,0.65)),
+                 url('/images/hero-bg.jpg') center/cover no-repeat;
+      color: white;
+      padding: 7rem 2rem;
+      text-align: center;
+    }
+    header h1 { font-size: 3.2rem; margin-bottom: 1rem; }
+    header p { font-size: 1.3rem; margin-bottom: 0.8rem; }
+    header .sub {
+      font-size: 1.1rem;
+      font-style: italic;
+      opacity: 0.9;
+    }
+
+    /* Navigation */
+    nav {
+      background: #004080;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 0.8rem;
+      border-radius: 6px;
+      transition: background 0.3s, color 0.3s;
+    }
+    nav a:hover { background: #0066cc; color: #fff; }
+
+    /* Cards & Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
     .card {
-      background: white; padding: 2rem; border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s;
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
       text-align: center;
     }
     .card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
     .icon { font-size: 40px; color: #00aaff; margin-bottom: 1rem; }
 
-    /* Company section */
-    .company-container { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2rem; }
-    .company-text { flex: 1; min-width: 280px; }
-    .company-logo { flex: 0 0 200px; }
-    .company-logo img { max-width: 100%; border-radius: 12px; }
-
-    /* Case Study */
+    /* Case Studies */
     .case-card {
-      background: #f9f9f9; border-radius: 12px; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      background: #f9f9f9;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
       transition: transform 0.3s;
     }
     .case-card:hover { transform: scale(1.02); }
     .case-card img { width: 100%; height: 180px; object-fit: cover; }
     .case-card .content { padding: 1rem; }
 
-    /* Results */
-    .results { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; text-align: center; margin-top: 3rem; }
-    .result-box { background: #e8f6ff; padding: 2rem; border-radius: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.1); }
-    .result-box h3 { color: #004080; font-size: 1.8rem; margin-bottom: 0.5rem; }
+    /* Results section */
+    .results {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      text-align: center;
+    }
+    .result-box {
+      flex: 1 1 200px;
+      background: #004080;
+      color: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .result-box h3 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: #00ccff;
+    }
+    .result-box p { margin: 0.5rem 0 0; }
 
+    /* Alternating section background */
+    .alt { background: #f7f9fc; }
+
+    /* Footer */
     footer {
-      background: #001F3F; color: white; padding: 2rem; text-align: center;
+      background: #001F3F;
+      color: white;
+      padding: 2rem;
+      text-align: center;
     }
     footer a { color: #00ccff; text-decoration: none; }
   </style>
@@ -68,30 +125,31 @@
   <!-- Hero -->
   <header>
     <h1>Hypeak Capital</h1>
-    <p>Providing the best energy solutions today for a sustainable tomorrow</p>
-    <p><em>Profesionales en asesoría y consultoría</em></p>
+    <p>Las mejores soluciones energéticas de hoy</p>
+    <p class="sub">Profesionales en asesoría y consultoría</p>
   </header>
 
   <!-- Navigation -->
   <nav>
     <a href="#company">Nuestra Compañía</a>
     <a href="#solutions">Soluciones</a>
-    <a href="#cases">Casos de Éxito</a>
+    <a href="#cases">Casos&nbsp;de&nbsp;Éxito</a>
+    <a href="#consulting">Consultoría</a>
     <a href="#contact">Contacto</a>
   </nav>
 
   <!-- Company -->
-  <section id="company">
+  <section id="company" class="alt">
     <h2>Nuestra Compañía</h2>
-    <div class="company-container">
-      <div class="company-text">
+    <div class="grid" style="align-items:center;">
+      <div>
         <p>
           Somos especialistas en innovación energética, ofreciendo soluciones personalizadas para desafíos complejos durante más de 15 años. <br><br>
           <strong>Misión:</strong> Impulsar el crecimiento sostenible a través de nuestra experiencia en soluciones energéticas.
         </p>
       </div>
-      <div class="company-logo">
-        <img src="/images/HypeakLogoOnly.jpg" alt="Hypeak Logo">
+      <div style="text-align:center;">
+        <img src="/images/HypeakLogoOnly.jpg" alt="Hypeak Logo" style="max-width:180px;">
       </div>
     </div>
   </section>
@@ -101,44 +159,47 @@
     <h2>Principales Soluciones y Servicios</h2>
     <div class="grid">
       <div class="card">
-        <div class="icon">🔎</div>
+        <div class="icon">📊</div>
         <h3>Selección de Soluciones</h3>
-        <p>Soluciones energéticas basadas en datos: análisis riguroso, ROI, comparación de opciones (solar, gas, almacenamiento, etc.)</p>
+        <p>Análisis riguroso de la viabilidad del proyecto, comparación tecnológica y asesoría para decisiones informadas.</p>
       </div>
       <div class="card">
-        <div class="icon">📄</div>
+        <div class="icon">⚡</div>
         <h3>Estructuración de PPAs</h3>
-        <p>Maximizamos el valor en acuerdos de compra de energía, con experiencia en negociación y cumplimiento normativo.</p>
+        <p>Maximizamos valor para compradores y vendedores de energía con experiencia en negociación y cumplimiento normativo.</p>
       </div>
       <div class="card">
         <div class="icon">💰</div>
         <h3>Financiamiento de Energía</h3>
-        <p>Acceso a estructuras de capital flexibles, modelos financieros innovadores y gestión comprobada de fondos.</p>
+        <p>Acceso a capital flexible, modelos financieros innovadores y gestión de fondos comprobada.</p>
       </div>
       <div class="card">
-        <div class="icon">📊</div>
+        <div class="icon">🎯</div>
         <h3>Consultoría y Estrategia</h3>
-        <p>Expertos en adquisición competitiva, estrategias de comercialización, gestión de riesgos y supervisión de proyectos.</p>
+        <p>Estrategias de adquisición, gestión de riesgos y visión integral en desarrollo de proyectos energéticos.</p>
       </div>
     </div>
+  </section>
 
-    <!-- Results -->
+  <!-- Results -->
+  <section class="alt">
+    <h2>Resultados Alcanzados</h2>
     <div class="results">
       <div class="result-box">
-        <h3>20+ MW</h3>
-        <p>soluciones implementadas</p>
+        <h3>20+</h3>
+        <p>MW Soluciones Implementadas</p>
       </div>
       <div class="result-box">
-        <h3>300+ GWh</h3>
-        <p>en transacciones PPA</p>
+        <h3>300+</h3>
+        <p>GWh en Transacciones PPA</p>
       </div>
       <div class="result-box">
-        <h3>$10M+ USD</h3>
-        <p>USD en financiamiento</p>
+        <h3>$10M+</h3>
+        <p>USD en Financiamiento</p>
       </div>
       <div class="result-box">
         <h3>50+</h3>
-        <p>Proyectos desarrollados</p>
+        <p>Proyectos Desarrollados</p>
       </div>
     </div>
   </section>
@@ -180,6 +241,15 @@
         <div class="content"><strong>Torreón:</strong> 350 kW Solar EPC</div>
       </div>
     </div>
+  </section>
+
+  <!-- Consulting -->
+  <section id="consulting" class="alt">
+    <h2>Consultoría y Estrategia</h2>
+    <p style="max-width:800px; margin:auto; text-align:center;">
+      Apoyamos a nuestros clientes con conocimientos de mercado, adquisición competitiva de energía,
+      comercialización estratégica, gestión de riesgos y supervisión integral de proyectos.
+    </p>
   </section>
 
   <!-- Contact -->
